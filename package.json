@@ -1,0 +1,16 @@
+{
+  "name": "node-js-palestra",
+  "version": "1.0.0",
+  "description": "Backend for FIAP test",
+  "repository": {
+    "url": "https://github.com/joaohd98/node-js-palestra"
+  },
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
