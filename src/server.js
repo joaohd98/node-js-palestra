@@ -9,3 +9,12 @@ app.get('/', (req, res) => res.send('Hello World!'));
 
 // Start the Express server
 app.listen(3000, () => console.log('Server running on port 3000!'));
+
+var routes = [
+    require('./api/routes/TipoCategoriaRoute'),
+    require('./api/routes/PalestraRoute'),
+    require('./api/routes/InscricaoaRoute'),
+
+];
+
+routes(app); //register the route
