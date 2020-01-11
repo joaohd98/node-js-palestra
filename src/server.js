@@ -1,20 +1,38 @@
-// app.js
-const express = require('express');
+let express = require("express");
+let bodyParser = require("body-parser");
+let sql = require("mssql");
+let app = express();
 
-// Create Express app
-const app = express();
+app.use(bodyParser.json());
+app.use(require("./middleware/access-control"));
 
-// A sample route
-app.get('/', (req, res) => res.send('Hello World!'));
+app.use(require("./api/routes/router").router);
 
-// Start the Express server
-app.listen(3000, () => console.log('Server running on port 3000!'));
+app.listen(3030);
 
-var routes = [
-    require('./api/routes/TipoCategoriaRoute'),
-    require('./api/routes/PalestraRoute'),
-    require('./api/routes/InscricaoaRoute'),
 
-];
+/*
+//GET API
+app.get("/api/user", function(req , res){
+    var query = "select * from [user]";
+    executeQuery (res, query);
+});
 
-routes(app); //register the route
+//POST API
+app.post("/api/user", function(req , res){
+    var query = "INSERT INTO [user] (Name,Email,Password) VALUES (req.body.Name,req.body.Email,req.body.Password”);
+    executeQuery (res, query);
+});
+
+//PUT API
+app.put("/api/user/:id", function(req , res){
+    var query = "UPDATE [user] SET Name= " + req.body.Name  +  " , Email=  " + req.body.Email + "  WHERE Id= " + req.params.id;
+    executeQuery (res, query);
+});
+
+// DELETE API
+app.delete("/api/user /:id", function(req , res){
+    var query = "DELETE FROM [user] WHERE Id=" + req.params.id;
+    executeQuery (res, query);
+});
+*/
