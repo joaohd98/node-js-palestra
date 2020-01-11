@@ -7,7 +7,7 @@ app.use(require("./middleware/access-control"));
 
 app.use(require("./api/routes/router").router);
 
-app.listen(3030);
+app.listen(process.env.PORT || 3030);
 
 
 /*
