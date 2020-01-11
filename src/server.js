@@ -1,6 +1,5 @@
 let express = require("express");
 let bodyParser = require("body-parser");
-let sql = require("mssql");
 let app = express();
 
 app.use(bodyParser.json());
