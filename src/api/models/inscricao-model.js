@@ -6,7 +6,7 @@ exports.callSpInscricaoSQL = function(req) {
 
   const { body } = req;
 
-  const parameters = `${body.codigoPalestra}, '${body.nome}', '${body.email}', '${body.empresa}', '${body.cargo}'`;
+  const parameters = `${body.CodigoPalestra}, '${body.Nome}', '${body.Email}', '${body.Empresa}', '${body.Cargo}'`;
 
   return `
     DECLARE @Status smallint
