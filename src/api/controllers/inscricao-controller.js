@@ -13,11 +13,7 @@ exports.callSpInscricao = function(req, res) {
 
  sql.executeQuery(model.callSpInscricaoSQL(req), function (data) {
 
-  try {
-   res.send(data[0]);
-  } catch (e) {
    res.send(data)
-  }
 
  });
 
